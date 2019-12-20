@@ -1,0 +1,1666 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "2.0",
+        "title": "uebermaps",
+        "description": "Enable people to store spots on public and private maps",
+        "termsOfService": "https:\/\/uebermaps.com\/terms\/"
+    },
+    "servers": [
+        "httpsuebermaps.com\/api\/v2"
+    ],
+    "paths": {
+        "\/account": {
+            "patch": {
+                "summary": "Update account",
+                "description": "Update account. Wrap map parameters in [user].",
+                "operationId": "AccountPatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "user attributes"
+                    }
+                ]
+            }
+        },
+        "\/attachments\/{id}": {
+            "delete": {
+                "summary": "Delete attachment",
+                "description": "Delete attachment.",
+                "operationId": "AttachmentsIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            }
+        },
+        "\/authentication": {
+            "post": {
+                "summary": "Sign in user",
+                "description": "Sign in user. Wrap authentication parameters in [user].",
+                "operationId": "AuthenticationPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "user attributes"
+                    }
+                ]
+            }
+        },
+        "\/collaborator_invitations": {
+            "get": {
+                "summary": "List your collaborator invitations",
+                "description": "List your collaborator invitations.",
+                "operationId": "CollaboratorInvitationsGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Invite user to collaborate on map",
+                "description": "Invite user to collaborate on map.",
+                "operationId": "CollaboratorInvitationsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "Supply map_id and either a comma separated list of user_ids or emails. Optionally you can provide a 'is_admin' parameter with 'true' or 'false' to give the invited users admin privileges."
+                    }
+                ]
+            }
+        },
+        "\/collaborator_invitations\/{id}": {
+            "delete": {
+                "summary": "Delete collaborator invitation",
+                "description": "Delete collaborator invitation.",
+                "operationId": "CollaboratorInvitationsIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Show collaborator invitation",
+                "description": "Show collaborator invitation",
+                "operationId": "CollaboratorInvitationsIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Accept collaborator invitation.",
+                "description": "Accept collaborator invitation.",
+                "operationId": "CollaboratorInvitationsIdPatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            }
+        },
+        "\/comments\/{id}": {
+            "delete": {
+                "summary": "Delete comment",
+                "description": "Delete comment.",
+                "operationId": "CommentsIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Update comment",
+                "description": "Update comment. Wrap comment parameters in [comment].",
+                "operationId": "CommentsIdPatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "comment",
+                        "in": "body",
+                        "description": "Comment attributes"
+                    }
+                ]
+            }
+        },
+        "\/events": {
+            "get": {
+                "summary": "List your own events",
+                "description": "List your own events.",
+                "operationId": "EventsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "timeframe_start",
+                        "in": "query",
+                        "description": "Begin of time range of event (ISO 8601 date format)."
+                    },
+                    {
+                        "name": "timeframe_end",
+                        "in": "query",
+                        "description": "End of time range of event (ISO 8601 date format)."
+                    },
+                    {
+                        "name": "bounds",
+                        "in": "query",
+                        "description": "To refine your event index request to contain only events within                                                             a geographical box pass the followng bounds parameters.                                                             F. e. to get events within 'Hamburg, St. Pauli':                                                             bounds[sw_lat]=53.54831449741324                                                             bounds[sw_lon]=9.943227767944336                         "
+                    }
+                ]
+            }
+        },
+        "\/events\/{id}": {
+            "delete": {
+                "summary": "Delete event",
+                "description": "Delete event.",
+                "operationId": "EventsIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get event",
+                "description": "Get basic information about an event",
+                "operationId": "EventsIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Update event",
+                "description": "Update event. Wrap event parameters in [event].",
+                "operationId": "EventsIdPatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "event",
+                        "in": "body",
+                        "description": "Event attributes"
+                    }
+                ]
+            }
+        },
+        "\/maps": {
+            "get": {
+                "summary": "List your own maps",
+                "description": "List your own maps.",
+                "operationId": "MapsGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create map",
+                "description": "Create map. Wrap map parameters in [map]. To add a map header picture pass a base64 encoded string to [map][picture].",
+                "operationId": "MapsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "map",
+                        "in": "body",
+                        "description": "map attributes"
+                    }
+                ]
+            }
+        },
+        "\/maps\/search": {
+            "get": {
+                "summary": "Search maps",
+                "description": "Search maps",
+                "operationId": "MapsSearchGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Query"
+                    },
+                    {
+                        "name": "d",
+                        "in": "query",
+                        "description": "Distance. Diameter of search radius in meter (default: 2000 meter)"
+                    },
+                    {
+                        "name": "lat",
+                        "in": "query",
+                        "description": "Latitude for search radius (default distance: 2000 meter)"
+                    },
+                    {
+                        "name": "lon",
+                        "in": "query",
+                        "description": "Longitude for search radius (default distance: 2000 meter)"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{id}": {
+            "delete": {
+                "summary": "Delete map",
+                "description": "Delete map.",
+                "operationId": "MapsIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get map",
+                "description": "Get basic information about a map",
+                "operationId": "MapsIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Update map",
+                "description": "Update map. Wrap map parameters in [map]. To update the map header picture pass a base64 encoded string to [map][picture].",
+                "operationId": "MapsIdPatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "map",
+                        "in": "body",
+                        "description": "map attributes"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{id}\/attachments": {
+            "get": {
+                "summary": "List attachments for a given map",
+                "description": "List attachments for a given map.",
+                "operationId": "MapsIdAttachmentsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Upload map attachment",
+                "description": "Upload map attachment. Wrap attachment parameters in [attachment]",
+                "operationId": "MapsIdAttachmentsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "image",
+                        "in": "body",
+                        "description": "Base64 encoded image"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{id}\/collaborators\/": {
+            "get": {
+                "summary": "List collaborators of a map",
+                "description": "List collaborators of a map.",
+                "operationId": "MapsIdCollaboratorsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{id}\/collaborators\/{user_id}": {
+            "delete": {
+                "summary": "Delete collaboration",
+                "description": "Delete collaboration.",
+                "operationId": "MapsIdCollaboratorsUserIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "user id"
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Update collaborator",
+                "description": "Update collaborator. Wrap collaborator parameters in [collaborator]",
+                "operationId": "MapsIdCollaboratorsUserIdPatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "user id"
+                    },
+                    {
+                        "name": "collaborator",
+                        "in": "body",
+                        "description": "collaborator attributes"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{id}\/comments": {
+            "get": {
+                "summary": "List comments for a given map",
+                "description": "List comments for a given map.",
+                "operationId": "MapsIdCommentsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create map comment",
+                "description": "Create map comment. Wrap comment parameters in [comment].",
+                "operationId": "MapsIdCommentsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "comment",
+                        "in": "body",
+                        "description": "Comment attributes"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{id}\/respots": {
+            "get": {
+                "summary": "List respots of a map",
+                "description": "List respots of a map.",
+                "operationId": "MapsIdRespotsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{id}\/spots": {
+            "get": {
+                "summary": "List spots for a given map",
+                "description": "List spots for a given map.",
+                "operationId": "MapsIdSpotsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "Order of spots"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create spot",
+                "description": "Create spot. Wrap parameters in [spot]. To add a spot picture pass a base64 encoded string to [spot][picture].",
+                "operationId": "MapsIdSpotsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "spot",
+                        "in": "body",
+                        "description": "spot attributes"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{id}\/subscriptions": {
+            "delete": {
+                "summary": "Unsubscribe from map",
+                "description": "Unsubscribe from map.",
+                "operationId": "MapsIdSubscriptionsDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "List subscriptions for a given map",
+                "description": "List subscriptions for a given map.",
+                "operationId": "MapsIdSubscriptionsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{map_id}\/spots\/{id}": {
+            "get": {
+                "summary": "Get spot",
+                "description": "Get basic information about a spot",
+                "operationId": "MapsMapIdSpotsIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "map_id",
+                        "in": "path",
+                        "description": "Id of map"
+                    }
+                ]
+            }
+        },
+        "\/maps\/{map_id}\/spots\/{spot_id}\/respot": {
+            "delete": {
+                "summary": "Delete respot from map by spot id",
+                "description": "Delete respot from map by spot id.",
+                "operationId": "MapsMapIdSpotsSpotIdRespotDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "map_id",
+                        "in": "path",
+                        "description": "Id of map"
+                    },
+                    {
+                        "name": "spot_id",
+                        "in": "path",
+                        "description": "Spot Id"
+                    }
+                ]
+            }
+        },
+        "\/respot_maps": {
+            "get": {
+                "summary": "List maps that user can respot to",
+                "description": "List maps that user can respot to.",
+                "operationId": "RespotMapsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/respots\/{id}": {
+            "delete": {
+                "summary": "Delete respot",
+                "description": "Delete respot.",
+                "operationId": "RespotsIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get respot",
+                "description": "Get basic information about a respot",
+                "operationId": "RespotsIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            }
+        },
+        "\/share\/map\/{id}": {
+            "get": {
+                "summary": "Get secret access token to share map",
+                "description": "Get secret access token of an uebermap with access set to 'Secret link'. Pass the 'token' on every request you make to access this uebermap and its resources. F.e. token=1-x_gqu7eLBe3uKoAGAGXy",
+                "operationId": "ShareMapIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            }
+        },
+        "\/spots": {
+            "get": {
+                "summary": "List your own spots",
+                "description": "List your own spots.",
+                "operationId": "SpotsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "Order of spots"
+                    }
+                ]
+            }
+        },
+        "\/spots\/search": {
+            "get": {
+                "summary": "Search spots",
+                "description": "Search spots",
+                "operationId": "SpotsSearchGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Query"
+                    },
+                    {
+                        "name": "d",
+                        "in": "query",
+                        "description": "Distance. Diameter of search radius in meter (default: 2000 meter)"
+                    },
+                    {
+                        "name": "lat",
+                        "in": "query",
+                        "description": "Latitude for search radius (default distance: 2000 meter)"
+                    },
+                    {
+                        "name": "lon",
+                        "in": "query",
+                        "description": "Longitude for search radius (default distance: 2000 meter)"
+                    }
+                ]
+            }
+        },
+        "\/spots\/{id}": {
+            "delete": {
+                "summary": "Delete spot",
+                "description": "Delete spot.",
+                "operationId": "SpotsIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "patch": {
+                "summary": "Update spot",
+                "description": "Update spot. Wrap parameters in [spot]. To update the spot picture pass a base64 encoded string to [spot][picture].",
+                "operationId": "SpotsIdPatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "spot",
+                        "in": "body",
+                        "description": "spot attributes"
+                    }
+                ]
+            }
+        },
+        "\/spots\/{id}\/attachments": {
+            "get": {
+                "summary": "List attachments for a given spot",
+                "description": "List attachments for a given spot.",
+                "operationId": "SpotsIdAttachmentsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Upload spot attachment",
+                "description": "Upload spot attachment. Wrap attachment parameters in [attachment]",
+                "operationId": "SpotsIdAttachmentsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "image",
+                        "in": "body",
+                        "description": "Base64 encoded image"
+                    }
+                ]
+            }
+        },
+        "\/spots\/{id}\/comments": {
+            "get": {
+                "summary": "List comments for a given spot",
+                "description": "List comments for a given spot.",
+                "operationId": "SpotsIdCommentsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create spot comment",
+                "description": "Create spot comment. Wrap comment parameters in [comment].",
+                "operationId": "SpotsIdCommentsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "comment",
+                        "in": "body",
+                        "description": "Comment attributes"
+                    }
+                ]
+            }
+        },
+        "\/spots\/{id}\/events": {
+            "get": {
+                "summary": "List events for a given spot",
+                "description": "List maps for a given spot.",
+                "operationId": "SpotsIdEventsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "timeframe_start",
+                        "in": "query",
+                        "description": "Begin of time range of event (ISO 8601 date format)."
+                    },
+                    {
+                        "name": "timeframe_end",
+                        "in": "query",
+                        "description": "End of time range of event (ISO 8601 date format)."
+                    },
+                    {
+                        "name": "bounds",
+                        "in": "query",
+                        "description": "To refine your event index request to contain only events within                                                             a geographical box pass the followng bounds parameters.                                                             F. e. to get events within 'Hamburg, St. Pauli':                                                             bounds[sw_lat]=53.54831449741324                                                             bounds[sw_lon]=9.943227767944336                         "
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create event",
+                "description": "Create event. Wrap map parameters in [event].",
+                "operationId": "SpotsIdEventsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "event",
+                        "in": "body",
+                        "description": "Event attributes"
+                    }
+                ]
+            }
+        },
+        "\/spots\/{id}\/respots": {
+            "post": {
+                "summary": "Respot a spot onto a map",
+                "description": "Respot a spot onto a map.",
+                "operationId": "SpotsIdRespotsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    },
+                    {
+                        "name": "map_id",
+                        "in": "body",
+                        "description": "Map Id"
+                    }
+                ]
+            }
+        },
+        "\/subscriptions": {
+            "get": {
+                "summary": "List subscriptions. Pass no parameters to get own subscriptions",
+                "description": "List subscriptions.",
+                "operationId": "SubscriptionsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "description": "Id of user"
+                    },
+                    {
+                        "name": "map_id",
+                        "in": "query",
+                        "description": "Id of map"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create map subscription",
+                "description": "Create map subscription.",
+                "operationId": "SubscriptionsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "map_id",
+                        "in": "body",
+                        "description": "Map Id"
+                    }
+                ]
+            }
+        },
+        "\/trends\/latest": {
+            "get": {
+                "summary": "List latest maps",
+                "description": "List latest maps.",
+                "operationId": "TrendsLatestGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/trends\/recommended": {
+            "get": {
+                "summary": "List recommended maps",
+                "description": "List recommended maps.",
+                "operationId": "TrendsRecommendedGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/users\/search": {
+            "get": {
+                "summary": "Search users",
+                "description": "Search users",
+                "operationId": "UsersSearchGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Query"
+                    }
+                ]
+            }
+        },
+        "\/users\/{id}": {
+            "get": {
+                "summary": "Get user profile",
+                "description": "Get profile a user",
+                "operationId": "UsersIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Attachment id"
+                    }
+                ]
+            }
+        },
+        "\/users\/{user_id}\/maps": {
+            "get": {
+                "summary": "List maps for a given user",
+                "description": "List maps for a given user.",
+                "operationId": "UsersUserIdMapsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "user id"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Attachment": {
+                "type": "object",
+                "properties": {
+                    "attachable_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "attachable_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "file_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sizes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Collaborator": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "group": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "is_admin": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CollaboratorEditable": {
+                "type": "object",
+                "properties": {
+                    "group": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CollaboratorInvitation": {
+                "type": "object",
+                "properties": {
+                    "accepted": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "group": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sent": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "invited_by_user_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "is_admin": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CollaboratorInvitationCreate": {
+                "type": "object",
+                "properties": {
+                    "emails": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "is_admin": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "user_ids": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Comment": {
+                "type": "object",
+                "properties": {
+                    "body": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CommentEditable": {
+                "type": "object",
+                "properties": {
+                    "body": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Event": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ends_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lat": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lon": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "owner_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "starts_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "EventCounts": {
+                "type": "object",
+                "properties": {
+                    "attachments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "comments": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "EventEditable": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ends_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lat": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lon": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "starts_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Map": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "owner_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "visibility": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MapCounts": {
+                "type": "object",
+                "properties": {
+                    "attachments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "comments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "impressions": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "respots": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "spots": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subscriptions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MapEditable": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "visibility": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MapRelation": {
+                "type": "object",
+                "properties": {
+                    "access": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "access_group": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "subscribed": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MapSettings": {
+                "type": "object",
+                "properties": {
+                    "editor_access": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "respotting_to_this_map": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "visitor_access": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MapWithAuthToken": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "owner_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "token": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "visibility": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "MapWithRelation": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "owner_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "visibility": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Respot": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Spot": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lat": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lon": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SpotCounts": {
+                "type": "object",
+                "properties": {
+                    "attachments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "comments": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "respot": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SpotEditable": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lat": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lon": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Subscription": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "User": {
+                "type": "object",
+                "properties": {
+                    "about": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "header_picture": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "location": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "screen_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UserAuthentication": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UserEditable": {
+                "type": "object",
+                "properties": {
+                    "about": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "header": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "language": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "location": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "picture": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "screen_name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UserFullProfile": {
+                "type": "object",
+                "properties": {
+                    "auth_token": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "language": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "SpotWithMap": {
+                "type": "object"
+            }
+        }
+    }
+}
