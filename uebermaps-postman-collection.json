@@ -1,0 +1,1912 @@
+{
+    "id": "90cd73176549db7b3a59b51ce07040de",
+    "name": "uebermaps",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "13b2cea066e0c4a4becd15404199d740",
+            "name": "Update account",
+            "url": "httpsuebermaps.com\/api\/v2\/account",
+            "description": "Update account. Wrap map parameters in [user].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "user attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "69649e76af51a5a84307658b68fe8255",
+            "name": "Delete attachment",
+            "url": "httpsuebermaps.com\/api\/v2\/attachments\/{id}",
+            "description": "Delete attachment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "dcb540d201ba3ae04b7805ce3ed36bea",
+            "name": "Sign in user",
+            "url": "httpsuebermaps.com\/api\/v2\/authentication",
+            "description": "Sign in user. Wrap authentication parameters in [user].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "user attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "fe0089a2a757fca8973efb0be7c3f41f",
+            "name": "List your collaborator invitations",
+            "url": "httpsuebermaps.com\/api\/v2\/collaborator_invitations",
+            "description": "List your collaborator invitations.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "16a2bc208d38fc9a2c115e3e5b2016c5",
+            "name": "Invite user to collaborate on map",
+            "url": "httpsuebermaps.com\/api\/v2\/collaborator_invitations",
+            "description": "Invite user to collaborate on map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "body",
+                    "description": "Supply map_id and either a comma separated list of user_ids or emails. Optionally you can provide a 'is_admin' parameter with 'true' or 'false' to give the invited users admin privileges.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "8f30a8d01b528e0504bc501f87caecdc",
+            "name": "Delete collaborator invitation",
+            "url": "httpsuebermaps.com\/api\/v2\/collaborator_invitations\/{id}",
+            "description": "Delete collaborator invitation.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "a57502d2f2f575d159534b78d63ad270",
+            "name": "Show collaborator invitation",
+            "url": "httpsuebermaps.com\/api\/v2\/collaborator_invitations\/{id}",
+            "description": "Show collaborator invitation",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "10e032df567d3073e34a3dd26a67b92d",
+            "name": "Accept collaborator invitation.",
+            "url": "httpsuebermaps.com\/api\/v2\/collaborator_invitations\/{id}",
+            "description": "Accept collaborator invitation.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "bfc2ed01497e60cce27d2a6c476acf75",
+            "name": "Delete comment",
+            "url": "httpsuebermaps.com\/api\/v2\/comments\/{id}",
+            "description": "Delete comment.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "c33f434aa09378e953ca21e416465a99",
+            "name": "Update comment",
+            "url": "httpsuebermaps.com\/api\/v2\/comments\/{id}",
+            "description": "Update comment. Wrap comment parameters in [comment].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "comment",
+                    "description": "Comment attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "d67a16c275303abe6990e3367ce3024b",
+            "name": "List your own events",
+            "url": "httpsuebermaps.com\/api\/v2\/events",
+            "description": "List your own events.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "timeframe_start",
+                    "description": "Begin of time range of event (ISO 8601 date format).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "timeframe_end",
+                    "description": "End of time range of event (ISO 8601 date format).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "bounds",
+                    "description": "To refine your event index request to contain only events within                                                             a geographical box pass the followng bounds parameters.                                                             F. e. to get events within 'Hamburg, St. Pauli':                                                             bounds[sw_lat]=53.54831449741324                                                             bounds[sw_lon]=9.943227767944336                         ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "27ebb8c5f407ceb688d864581b42f2f4",
+            "name": "Delete event",
+            "url": "httpsuebermaps.com\/api\/v2\/events\/{id}",
+            "description": "Delete event.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "fa647de75b14ab51f14c1c926fc459ec",
+            "name": "Get event",
+            "url": "httpsuebermaps.com\/api\/v2\/events\/{id}",
+            "description": "Get basic information about an event",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "f2c4470eb60e46dc27e5b5a7093f8389",
+            "name": "Update event",
+            "url": "httpsuebermaps.com\/api\/v2\/events\/{id}",
+            "description": "Update event. Wrap event parameters in [event].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "event",
+                    "description": "Event attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "f0fe7ca7f4a06638f805a403738e3171",
+            "name": "List your own maps",
+            "url": "httpsuebermaps.com\/api\/v2\/maps",
+            "description": "List your own maps.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "18a8d1d78bff68524f2633a7e18175f6",
+            "name": "Create map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps",
+            "description": "Create map. Wrap map parameters in [map]. To add a map header picture pass a base64 encoded string to [map][picture].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "map",
+                    "description": "map attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "baed66fb77daf1b3b06e91a57a430a00",
+            "name": "Search maps",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/search",
+            "description": "Search maps",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "q",
+                    "description": "Query",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "d",
+                    "description": "Distance. Diameter of search radius in meter (default: 2000 meter)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lat",
+                    "description": "Latitude for search radius (default distance: 2000 meter)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lon",
+                    "description": "Longitude for search radius (default distance: 2000 meter)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "c128d7b2752c322e906651bf988a112e",
+            "name": "Delete map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}",
+            "description": "Delete map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "162aaf17bd81a9583a2a8d250a29a842",
+            "name": "Get map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}",
+            "description": "Get basic information about a map",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "db1b68f76a88a8b1ef2ed9b71d0233c9",
+            "name": "Update map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}",
+            "description": "Update map. Wrap map parameters in [map]. To update the map header picture pass a base64 encoded string to [map][picture].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "map",
+                    "description": "map attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "0dfa702fd155c1899078a8719cb39ddc",
+            "name": "List attachments for a given map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/attachments",
+            "description": "List attachments for a given map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "8e516a21210a05cce8d57a265c030439",
+            "name": "Upload map attachment",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/attachments",
+            "description": "Upload map attachment. Wrap attachment parameters in [attachment]",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "image",
+                    "description": "Base64 encoded image",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "4bc0ba0ce54285b19d1c07b69c4f5bef",
+            "name": "List collaborators of a map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/collaborators\/",
+            "description": "List collaborators of a map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "2daaf01af31803adf74f6d5a81b4f44a",
+            "name": "Delete collaboration",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/collaborators\/{user_id}",
+            "description": "Delete collaboration.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "500c3b4a38fffeb7d0b91240b755f3fe",
+            "name": "Update collaborator",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/collaborators\/{user_id}",
+            "description": "Update collaborator. Wrap collaborator parameters in [collaborator]",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_id",
+                    "description": "user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "collaborator",
+                    "description": "collaborator attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "1d86fb71116676672ada74c6231d6a91",
+            "name": "List comments for a given map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/comments",
+            "description": "List comments for a given map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "529742e408d45b9417a6a13a525cab2c",
+            "name": "Create map comment",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/comments",
+            "description": "Create map comment. Wrap comment parameters in [comment].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "comment",
+                    "description": "Comment attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "f53a54d97afbab67f623ad2b232018ba",
+            "name": "List respots of a map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/respots",
+            "description": "List respots of a map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "bcf3b09011c59b5c1895eeece7a9a95e",
+            "name": "List spots for a given map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/spots",
+            "description": "List spots for a given map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "order",
+                    "description": "Order of spots",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "5a66ae571bb49ac2a69accd741166c30",
+            "name": "Create spot",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/spots",
+            "description": "Create spot. Wrap parameters in [spot]. To add a spot picture pass a base64 encoded string to [spot][picture].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "spot",
+                    "description": "spot attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "0164945034ffb8bac55c5e05441560ce",
+            "name": "Unsubscribe from map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/subscriptions",
+            "description": "Unsubscribe from map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "9b60b89603ff4113e1a70182c5e9dd60",
+            "name": "List subscriptions for a given map",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{id}\/subscriptions",
+            "description": "List subscriptions for a given map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "e5aee898b4e567c2d31538091b3adee7",
+            "name": "Get spot",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{map_id}\/spots\/{id}",
+            "description": "Get basic information about a spot",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "map_id",
+                    "description": "Id of map",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "aa8ee98d48bfa3ed7aadcee52012635f",
+            "name": "Delete respot from map by spot id",
+            "url": "httpsuebermaps.com\/api\/v2\/maps\/{map_id}\/spots\/{spot_id}\/respot",
+            "description": "Delete respot from map by spot id.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "map_id",
+                    "description": "Id of map",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "spot_id",
+                    "description": "Spot Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "5142343f2e4ce8c168ba11b751cad30e",
+            "name": "List maps that user can respot to",
+            "url": "httpsuebermaps.com\/api\/v2\/respot_maps",
+            "description": "List maps that user can respot to.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "b537046b3455a515803107f92b290ee6",
+            "name": "Delete respot",
+            "url": "httpsuebermaps.com\/api\/v2\/respots\/{id}",
+            "description": "Delete respot.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "f9b06687a7f7f83d960b15e743595d77",
+            "name": "Get respot",
+            "url": "httpsuebermaps.com\/api\/v2\/respots\/{id}",
+            "description": "Get basic information about a respot",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "12f5190ba844d18a07f9df1acefe22d8",
+            "name": "Get secret access token to share map",
+            "url": "httpsuebermaps.com\/api\/v2\/share\/map\/{id}",
+            "description": "Get secret access token of an uebermap with access set to 'Secret link'. Pass the 'token' on every request you make to access this uebermap and its resources. F.e. token=1-x_gqu7eLBe3uKoAGAGXy",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "d5de7e9be79c855794d368881c3c1acb",
+            "name": "List your own spots",
+            "url": "httpsuebermaps.com\/api\/v2\/spots",
+            "description": "List your own spots.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "order",
+                    "description": "Order of spots",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "aab23c623250c3e75608890fc2a7f0d0",
+            "name": "Search spots",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/search",
+            "description": "Search spots",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "q",
+                    "description": "Query",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "d",
+                    "description": "Distance. Diameter of search radius in meter (default: 2000 meter)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lat",
+                    "description": "Latitude for search radius (default distance: 2000 meter)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "lon",
+                    "description": "Longitude for search radius (default distance: 2000 meter)",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "c5e2471306c1cadf2c2b77b6ec87c9cb",
+            "name": "Delete spot",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/{id}",
+            "description": "Delete spot.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "1308cd7f3a5da5c2b270d01e9fbbe464",
+            "name": "Update spot",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/{id}",
+            "description": "Update spot. Wrap parameters in [spot]. To update the spot picture pass a base64 encoded string to [spot][picture].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "spot",
+                    "description": "spot attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "43f5508e3b2337a8e47d239b84845131",
+            "name": "List attachments for a given spot",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/{id}\/attachments",
+            "description": "List attachments for a given spot.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "a74783fb734da33ab23d566206b170de",
+            "name": "Upload spot attachment",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/{id}\/attachments",
+            "description": "Upload spot attachment. Wrap attachment parameters in [attachment]",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "image",
+                    "description": "Base64 encoded image",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "ccfcad835b08518c458cbe7a726fb531",
+            "name": "List comments for a given spot",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/{id}\/comments",
+            "description": "List comments for a given spot.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "36501a8c643487f8710ae08bc268a8cf",
+            "name": "Create spot comment",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/{id}\/comments",
+            "description": "Create spot comment. Wrap comment parameters in [comment].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "comment",
+                    "description": "Comment attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "88a012866a56d4be8bc0c945012c9038",
+            "name": "List events for a given spot",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/{id}\/events",
+            "description": "List maps for a given spot.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "timeframe_start",
+                    "description": "Begin of time range of event (ISO 8601 date format).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "timeframe_end",
+                    "description": "End of time range of event (ISO 8601 date format).",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "bounds",
+                    "description": "To refine your event index request to contain only events within                                                             a geographical box pass the followng bounds parameters.                                                             F. e. to get events within 'Hamburg, St. Pauli':                                                             bounds[sw_lat]=53.54831449741324                                                             bounds[sw_lon]=9.943227767944336                         ",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "efec9ea5fae2a1ddce96c153abe0eef3",
+            "name": "Create event",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/{id}\/events",
+            "description": "Create event. Wrap map parameters in [event].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "event",
+                    "description": "Event attributes",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "e3fc31bbcab6313e848ea8d2e0994435",
+            "name": "Respot a spot onto a map",
+            "url": "httpsuebermaps.com\/api\/v2\/spots\/{id}\/respots",
+            "description": "Respot a spot onto a map.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "map_id",
+                    "description": "Map Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "5cbf05bc0321f75cf483500a75e6da29",
+            "name": "List subscriptions. Pass no parameters to get own subscriptions",
+            "url": "httpsuebermaps.com\/api\/v2\/subscriptions",
+            "description": "List subscriptions.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "Id of user",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "map_id",
+                    "description": "Id of map",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "1ffcfc8990123d0c3778b087c280dd68",
+            "name": "Create map subscription",
+            "url": "httpsuebermaps.com\/api\/v2\/subscriptions",
+            "description": "Create map subscription.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "map_id",
+                    "description": "Map Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "eca13b781c3d4489f87f6fdc7c894227",
+            "name": "List latest maps",
+            "url": "httpsuebermaps.com\/api\/v2\/trends\/latest",
+            "description": "List latest maps.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "f56e5d67120a6533a425d64a36a99d84",
+            "name": "List recommended maps",
+            "url": "httpsuebermaps.com\/api\/v2\/trends\/recommended",
+            "description": "List recommended maps.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "49a61ae73031e47ffabab1742ad18b03",
+            "name": "Search users",
+            "url": "httpsuebermaps.com\/api\/v2\/users\/search",
+            "description": "Search users",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "q",
+                    "description": "Query",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "98df0978e8d921bb9eeeb0a1e9670598",
+            "name": "Get user profile",
+            "url": "httpsuebermaps.com\/api\/v2\/users\/{id}",
+            "description": "Get profile a user",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "id",
+                    "description": "Attachment id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        },
+        {
+            "id": "4776753ec5a5a25fffe454af1c5c7a4b",
+            "name": "List maps for a given user",
+            "url": "httpsuebermaps.com\/api\/v2\/users\/{user_id}\/maps",
+            "description": "List maps for a given user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user_id",
+                    "description": "user id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "90cd73176549db7b3a59b51ce07040de",
+            "rawModeData": ""
+        }
+    ]
+}
