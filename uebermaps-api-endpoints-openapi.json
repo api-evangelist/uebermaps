@@ -1,0 +1,878 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "2.0",
+        "title": "uebermaps API endpoints",
+        "description": "Enable people to store spots on public and private maps",
+        "termsOfService": "https:\/\/uebermaps.com\/terms\/"
+    },
+    "servers": [
+        "http:\/\/uebermaps.com\/api\/v2"
+    ],
+    "paths": {
+        "\/account": {
+            "patch": {
+                "summary": "Update account",
+                "description": "Update account. Wrap map parameters in [user].",
+                "operationId": "AccountPatch",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Attachment": {
+                "type": "object",
+                "properties": {
+                    "attachable_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "attachable_type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "file_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "sizes": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "spot": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "sizes": {
+                "type": "object"
+            },
+            "spot": {
+                "type": "object",
+                "properties": {
+                    "counts": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "lat": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "lon": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "user": {
+                "type": "object",
+                "properties": {
+                    "about": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "counts": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "header_picture": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "location": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "screen_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Collaborator": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "group": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "is_admin": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "map": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "map": {
+                "type": "object",
+                "properties": {
+                    "counts": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "map_settings": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "owner_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "visibility": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CollaboratorEditable": {
+                "type": "object",
+                "properties": {
+                    "group": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CollaboratorInvitation": {
+                "type": "object",
+                "properties": {
+                    "accepted": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "group": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "invited_by_user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "map": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "sent": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CollaboratorInvitationCreate": {
+                "type": "object",
+                "properties": {
+                    "emails": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "is_admin": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "user_ids": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Comment": {
+                "type": "object",
+                "properties": {
+                    "body": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "CommentEditable": {
+                "type": "object",
+                "properties": {
+                    "body": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Event": {
+                "type": "object",
+                "properties": {
+                    "counts": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ends_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "lat": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "lon": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "owner_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "spot": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "starts_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "counts": {
+                "type": "object"
+            },
+            "EventCounts": {
+                "type": "object",
+                "properties": {
+                    "attachments": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "comments": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "EventEditable": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "ends_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lat": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "lon": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "picture": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "starts_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "map_settings": {
+                "type": "object"
+            },
+            "MapCounts": {
+                "type": "object",
+                "properties": {
+                    "attachments": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "comments": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "impressions": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "respots": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "spots": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "subscriptions": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "MapEditable": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "map_settings": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "picture": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "visibility": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MapRelation": {
+                "type": "object",
+                "properties": {
+                    "access": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "access_group": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "subscribed": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "MapSettings": {
+                "type": "object",
+                "properties": {
+                    "editor_access": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "respotting_to_this_map": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "visitor_access": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MapWithAuthToken": {
+                "type": "object",
+                "properties": {
+                    "MapCounts": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "counts": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "owner_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "token": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "visibility": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MapWithRelation": {
+                "type": "object",
+                "properties": {
+                    "MapCounts": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "counts": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "MapSettings": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "map_settings": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "owner_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "picture_url": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "MapRelation": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "relation": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "visibility": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Respot": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "map": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "map_id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "spot": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "SpotCounts": {
+                "type": "object",
+                "properties": {
+                    "attachments": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "comments": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "respot": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "SpotEditable": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lat": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "lon": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "picture": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Subscription": {
+                "type": "object",
+                "properties": {
+                    "created_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "map": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "updated_at": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "user_id": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "UserAuthentication": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UserEditable": {
+                "type": "object",
+                "properties": {
+                    "about": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "header": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "language": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "location": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "picture": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "screen_name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UserFullProfile": {
+                "type": "object",
+                "properties": {
+                    "auth_token": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "language": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "time_zone": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
