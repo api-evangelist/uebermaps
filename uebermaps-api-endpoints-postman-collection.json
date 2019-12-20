@@ -1,0 +1,36 @@
+{
+    "id": "3c4a638fa6192298886bb6f8b37db99c",
+    "name": "uebermaps API endpoints",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "a917b3ce8026c5ecf81e34a8692b85ae",
+            "name": "Update account",
+            "url": "http:\/\/uebermaps.com\/api\/v2\/account",
+            "description": "Update account. Wrap map parameters in [user].",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "3c4a638fa6192298886bb6f8b37db99c",
+            "rawModeData": ""
+        }
+    ]
+}
