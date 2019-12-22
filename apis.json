@@ -8,8 +8,8 @@
         "have swagger",
         "maps"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/uebermaps\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -27,7 +27,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/uebermaps-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/uebermaps\/master\/uebermaps-openapi.json"
                 }
             ]
         },
@@ -41,17 +41,21 @@
             "properties": [
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/uebermaps-api-endpoints-openapi.json"
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/uebermaps-api-endpoints.json"
                 },
                 {
                     "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/uebermaps-api-endpoints.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/uebermaps\/master\/uebermaps-api-endpoints-openapi.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Authentication",
             "url": "https:\/\/uebermaps.com\/api\/v2#preface_authentication"
