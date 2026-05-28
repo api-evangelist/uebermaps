@@ -1,0 +1,32 @@
+aid: uebermaps
+name: Uebermaps
+description: "Discover and share maps with friends"
+url: https://uebermaps.com/api/v2
+specificationVersion: '0.20'
+created: '2026-05-28'
+modified: '2026-05-28'
+x-source: public-apis/public-apis
+x-category: "Geocoding"
+x-tier: 3
+x-tier-reason: bulk-registered-from-public-apis
+tags:
+  - Geocoding
+  - Public APIs
+apis:
+  - name: Uebermaps
+    description: "Discover and share maps with friends"
+    humanURL: https://uebermaps.com/api/v2
+    baseURL: https://uebermaps.com/api/v2
+    tags:
+      - Geocoding
+    properties:
+      - type: Documentation
+        url: https://uebermaps.com/api/v2
+common:
+  - type: Website
+    url: https://uebermaps.com/api/v2
+  - type: PublicAPIsListing
+    url: https://github.com/public-apis/public-apis
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
