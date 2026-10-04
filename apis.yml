@@ -39,7 +39,6 @@ apis:
   - name: Uebermaps
     description: "Discover and share maps with friends"
     humanURL: https://uebermaps.com/api/v2
-    baseURL: https://uebermaps.com/api/v2
     tags:
       - Geocoding
     properties:
